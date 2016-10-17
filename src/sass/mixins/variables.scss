@@ -1,0 +1,126 @@
+
+// colors
+// ---------------
+
+//base colors
+$white: #fff;
+$black: #191e25;
+
+$blue: #0070f0;
+$blue-border: $blue;
+$blue-bg: #f4f7fb;
+$blue-bg-light: #fafcff;
+
+$gray: #8792a3;
+$gray-border: #d1d9e0;
+$gray-bg: #e6e4e5;
+
+$green: #27a907;
+$green-border: $green;
+$green-bg: #ebf2e6;
+
+$red: #f6444d;
+$red-border: $red;
+$red-bg:#feece8;
+
+$orange: #ff7e00;
+$orange-border: $orange;
+$orange-bg: #ffefe1;
+
+//transport
+$default-transport: all 0.2s;
+
+// link
+$text-color:            $black !default;
+$link-color:            $blue !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+
+$font-family-sans-serif:  'Lantinghei SC', 'Helvetica Neue', Arial, 'Microsoft Yahei', sans-serif;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// header
+$font-size-h1:            ceil(($font-size-base * 2.28)) !default; // ~32px
+$font-size-h2:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h4:            ceil(($font-size-base * 1.14)) !default; // ~16px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$headings-font-family:    inherit !default;
+$headings-font-weight:    normal !default;
+$headings-line-height:    1.1 ;
+$headings-color:          inherit !default;
+
+$border-radius-base:        0 !default;
+$border-radius-large:       0 !default;
+$border-radius-small:       0 !default;
+
+$input-border:                   #e0e6ec !default;
+$input-border-focus:             $blue !default;
+$input-height-base:              40px !default;
+
+$modal-hg:                    900px !default;
+$modal-lg:                    600px !default;
+$modal-md:                    400px !default;
+$modal-sm:                    300px !default;
+$modal-footer-inner-padding:         10px !default;
+$modal-border-radius:		  4px !default;
+$modal-content-border-color:                   rgba(255, 255, 255, 0.94) !default;
+
+$table-margin-top:              20px!default;
+$table-cell-padding:            0 15px !default;
+$table-cell-height:             70px!default;
+$table-border-width:            2px!default;
+$table-border-color:            $gray-border;
+$table-cell-odd-bg:				$blue-bg;
+$table-cell-hover-bg:           darken($blue-bg,5%);
+
+$btn-default-color:              $black !default;
+$btn-default-bg:                 $white !default;
+$btn-default-border:             #e0e6ec !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $blue !default;
+$btn-primary-border:             $blue !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $green !default;
+$btn-success-border:             $green !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    #60a1f5 !default;
+$btn-info-border:                #60a1f5 !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 #f5c905 !default;
+$btn-warning-border:             #f5c905 !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $red !default;
+$btn-danger-border:              $red !default;
+
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

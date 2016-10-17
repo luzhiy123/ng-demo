@@ -1,0 +1,60 @@
+// $blue:#0070f0;
+// $blue-light:#f1f7fe;
+// $blue-lighter:#fafcff;
+// $blue-dark:darken($blue, 10%);
+// $blue-darker:darken($blue, 20%);
+// $blue-bg:#f4f7fb;
+
+// $gray:#8792a3;
+// $gray-dark:darken($gray, 10%);
+// $gray-light:#d1d9e0;
+// $gray-lighter:#ebeff5;
+// $gray-border:#d1d9e0;
+
+// $green:#27a907;
+// $green-dark:darken($green, 10%);
+// $green-border: #95d585;
+// $green-bg: #e7f5e3;
+
+// $red:#f6444d;
+// $red-dark:darken($red, 10%);
+// $red-light:#feeced;
+
+// $black:#191e25;
+
+// $orange:#ff7e00;
+// $orange-dark:darken($orange, 10%);
+
+// $border-gray: #e6ebf0;
+// $text-gray: #8792a3;
+// // $gray: #8e9194;
+// $grayDarkBorder: #c1c9d6;
+// $grayDarkBg: #eff3f7;
+
+$white: #fff;
+
+/*新命名变量*/
+$white: #fff;
+$black: #191e25;
+
+$blue: #0070f0;
+$blue-border: $blue;
+$blue-bg: #f4f7fb;
+$blue-bg-light: #fafcff;
+
+$gray: #8792a3;
+$gray-border: #d1d9e0;
+$gray-bg: lighten($gray, 90%);
+
+$green: #27a907;
+$green-border: $green;
+$green-bg: lighten($green, 90%);
+
+$red: #f6444d;
+$red-border: $red;
+$red-bg: lighten($red, 90%);
+
+$orange: #ff7e00;
+$orange-border: $orange;
+$orange-bg: lighten($orange, 90%);
+

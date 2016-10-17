@@ -1,0 +1,187 @@
+$header-divider-color: #f1f7fe;
+$nav-bg:#eff3f7;
+
+.tb-header {
+    height: 64px;
+    min-width: 1120px;
+    color: #fff;
+    .head-container {
+        height: 64px;
+        padding: 0 12px;
+        background-color: $blue;
+    }
+    .logo {
+        float: left;
+        margin: 16px 0;
+        width: 85px;
+        height: 30px;
+        background: url(../images/testbird-logo.png);
+        background-size: 100% 100%;
+    }
+    .divider {
+        float: left;
+        width: 1px;
+        height: 24px;
+        margin: 21px 15px 0 15px;
+        background-color: $header-divider-color;
+        opacity: .2;
+    }
+    h1 {
+        position: relative;
+        line-height: 64px;
+        margin: 0;
+        float: left;
+        font-size: 28px;
+    }
+    .btn-app-upload {
+        position: absolute;
+        right: -80px;
+        top: 20px;
+        padding: 3px 8px;
+        background-color: #0053b3;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 2px;
+        &:hover {
+            color: #fff;
+            background-color: darken(#0064D6, 10%);
+        }
+    }
+    .user {
+        float: right;
+        font-size: 14px;
+        line-height: 64px;
+        cursor: pointer;
+    }
+    .open {
+        .dropdown-menu {
+            -webkit-animation: fadeIn 0.5s 1;
+            animation: fadeIn 0.5s 1;
+        }
+        .fa-sort-desc {
+            @include animation(roll 0.3s 1);
+            @include transform(rotate(180deg));
+        }
+    }
+    .fa-sort-desc {
+        height: 20px;
+        @include animation(roll-back 0.3s 1);
+    }
+    .dropdown-menu {
+        min-width: 200px;
+        right: 0;
+        left: auto;
+        top: 55px;
+        background-color: #fff;
+        cursor: default;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 2px;
+        -webkit-animation: fadeOut 0.2s 1;
+        animation: fadeOut 0.2s 1;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        li {
+            margin: 10px;
+            border-radius: 5px;
+            &.divider-line {
+                height: 1px;
+                background-color: #e5e5e5;
+                border-radius: 0;
+                margin: 0 10px;
+            }
+            a {
+                margin: 0;
+                padding: 0;
+                padding-left: 15px;
+                border-bottom: 0;
+                line-height: 30px;
+                color: $gray;
+                font-size: 14px;
+                &:hover {
+                    color: $gray;
+                    background-color: $blue-bg;
+                }
+            }
+        }
+        .icon {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+}
+
+.tb-nav {
+    padding-left: 140px;
+    height: 36px;
+    line-height: 36px;
+    background-color: $nav-bg;
+    border-bottom: 1px solid $gray-border;
+    color: $gray;
+    .nav-link {
+        font-size: 14px;
+        margin-right: 5px;
+        color: $gray;
+        &:hover {
+            color: $blue;
+        }
+    }
+    .apps-menu {
+        width: 242px;
+        overflow: auto;
+        li {
+            position: relative;
+            margin: 5px 10px;
+            padding: 5px;
+            line-height: 50px;
+            overflow: hidden;
+            &:hover {
+                cursor: pointer;
+                background-color: $blue-bg;
+            }
+        }
+        .horizontal-divider {
+            margin: 0 10px;
+            padding: 0;
+            border-top: 1px solid $gray-border;
+            cursor: default!important;
+        }
+        img {
+            float: left;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        a {
+            width: 170px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            float: left;
+            clear: none;
+            line-height: 40px;
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        .icon-ios {
+            position: absolute;
+            left: -3px;
+            top: -3px;
+            width: 16px;
+            height: 16px;
+            background-image: url("../images/icon-ios.png");
+            background-size: 100% 100%;
+        }
+        .icon-android {
+            position: absolute;
+            left: -3px;
+            top: -3px;
+            width: 16px;
+            height: 16px;
+            background-image: url("../images/icon-android.png");
+            background-size: 100% 100%;
+        }
+    }
+}

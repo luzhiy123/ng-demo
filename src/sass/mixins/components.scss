@@ -1,0 +1,167 @@
+//table
+//--------------
+@mixin table-class($border-width: $table-border-width, $border-color: $table-border-color, $margin-top: $table-margin-top, $cell-height:$table-cell-height, $cell-padding:$table-cell-padding) {
+    border: $border-width solid $border-color;
+    width: 100%;
+    margin-top: $margin-top;
+    * {
+        text-align: center;
+    }
+    thead {
+        * {
+            color: $gray;
+        }
+        tr {
+            border-bottom: solid $border-width $border-color;
+            & >:first-child {
+                text-align: left;
+            }
+            th {
+                background-color: #fff;
+                font-weight: normal;
+                text-align: right;
+                height: $cell-height;
+                padding: $cell-padding;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-of-type(even) {
+                background-color: $white;
+            }
+            &:nth-of-type(odd) {
+                background-color: $table-cell-odd-bg;
+            }
+            &:hover {
+                background-color: $table-cell-hover-bg;
+            }
+            border-bottom: solid $border-width $border-color;
+            & >:first-child {
+                text-align: left;
+            }
+            td {
+                text-align: right;
+                vertical-align: inherit;
+                height: $cell-height;
+                padding: $cell-padding;
+            }
+        }
+    }
+}
+
+//dropdown-menu
+//--------------
+@mixin dropdown-menu-class($min-width:200px) {
+    min-width: $min-width;
+    background-color: #fff;
+    cursor: default;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 2px;
+    li {
+        margin: 10px;
+        border-radius: 5px;
+        &:hover {
+            background-color: $blue-bg;
+        }
+        &.divider-line {
+            height: 1px;
+            background-color: #e5e5e5;
+            border-radius: 0;
+            margin: 0 10px;
+        }
+        a {
+            margin: 0;
+            padding: 0;
+            padding-left: 15px;
+            border-bottom: 0;
+            line-height: 30px;
+            border-radius: 2px;
+            color: $gray;
+            background-color: #fff;
+            font-size: 14px;
+            &:hover {
+                color: $gray;
+            }
+        }
+    }
+}
+
+//form-control
+//--------------
+@mixin form-control-focus($color: $input-border-focus) {
+    $color-rgba: rgba(red($color), green($color), blue($color), .6);
+    &:focus {
+        border-color: $color;
+        outline: 0;
+        @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px $color-rgba);
+    }
+}
+
+//botton
+//--------------
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}
+
+@mixin button-fixed-size($width, $height, $font-size) {
+    width: $width;
+    height: $height;
+    line-height: 30px;
+    font-size: $font-size;
+    padding: 0;
+}
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:focus,
+    &.focus {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+    }
+    &:hover {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: darken($background, 17%);
+            border-color: darken($border, 25%);
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
